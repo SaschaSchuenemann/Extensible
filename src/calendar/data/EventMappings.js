@@ -77,54 +77,54 @@ Ext.ns('Extensible.calendar.data');
 // @define Extensible.calendar.data.EventMappings
 Extensible.calendar.data.EventMappings = {
     EventId: {
-        name:    'EventId',
+        name:    'id',
         mapping: 'id',
         type:    'string'
     },
     CalendarId: {
-        name:    'CalendarId',
+        name:    'cid',
         mapping: 'cid',
         type:    'string'
     },
     Title: {
-        name:    'Title',
+        name:    'title',
         mapping: 'title',
         type:    'string'
     },
     StartDate: {
-        name:       'StartDate',
+        name:       'start',
         mapping:    'start',
         type:       'date',
         dateFormat: 'c'
     },
     EndDate: {
-        name:       'EndDate',
+        name:       'end',
         mapping:    'end',
         type:       'date',
         dateFormat: 'c'
     },
     Location: {
-        name:    'Location',
+        name:    'loc',
         mapping: 'loc',
         type:    'string'
     },
     Notes: {
-        name:    'Notes',
+        name:    'notes',
         mapping: 'notes',
         type:    'string'
     },
     Url: {
-        name:    'Url',
+        name:    'url',
         mapping: 'url',
         type:    'string'
     },
     IsAllDay: {
-        name:    'IsAllDay',
+        name:    'ad',
         mapping: 'ad',
         type:    'boolean'
     },
     Reminder: {
-        name:    'Reminder',
+        name:    'rem',
         mapping: 'rem',
         type:    'string'
     },
@@ -145,7 +145,7 @@ Extensible.calendar.data.EventMappings = {
     // choose to provide a custom implementation, but out of the box only
     // the iCal RRULE format is handled by the components.
     RRule: {
-        name:    'RRule',
+        name:    'rrule',
         mapping: 'rrule',
         type:    'string',
         useNull: true
@@ -159,7 +159,7 @@ Extensible.calendar.data.EventMappings = {
     // recurrence so that the end date of each event instance can be
     // properly calculated.
     Duration: {
-        name:         'Duration',
+        name:         'duration',
         mapping:      'duration',
         defaultValue: -1,   // the standard int default of 0 is actually a valid duration
         useNull:      true, // Without this, the null returned from the server is coerced to 0
@@ -173,7 +173,7 @@ Extensible.calendar.data.EventMappings = {
     // typically these will be generated from the RRULE pattern, not real events
     // that exist in the DB.
     OriginalEventId: {
-        name:    'OriginalEventId',
+        name:    'origid',
         mapping: 'origid',
         type:    'string',
         useNull: true
@@ -181,7 +181,7 @@ Extensible.calendar.data.EventMappings = {
     
     // The start date for the recurring series.
     RSeriesStartDate: {
-        name:       'RSeriesStartDate',
+        name:       'rsstart',
         mapping:    'rsstart',
         type:       'date',
         dateFormat: 'c',
@@ -195,7 +195,7 @@ Extensible.calendar.data.EventMappings = {
     // the updated start date, you need a way to pass the original unedited start date
     // to be used as the exception date, which is what this instance start date is for.
     RInstanceStartDate: {
-        name:       'RInstanceStartDate',
+        name:       'ristart',
         mapping:    'ristart',
         type:       'date',
         dateFormat: 'c',
@@ -207,7 +207,7 @@ Extensible.calendar.data.EventMappings = {
     // display purposes), but it's kept on the record for ease of transmission to
     // the server, and because multiple batched events could have different edit modes.
     REditMode: {
-        name:    'REditMode',
+        name:    'redit',
         mapping: 'redit',
         type:    'string',
         useNull: true
